@@ -24,7 +24,7 @@
 .todoContainer {
   background: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  position: relative; // Добавляем для z-index
+  position: relative;
   z-index: 2;
 }
 
@@ -33,7 +33,6 @@
   position: relative;
   height: 7px;
   width: 630px;
-  // margin: -15px 0;
   background: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -67,12 +66,9 @@
 }
 
 .swiper {
-  max-width: 600px;
+  width: 600px;
+  height: 195px;
   padding-inline: 20px;
-}
-
-.slide {
-  // padding: 0 16px;
 }
 
 .tasksContainer {
@@ -154,6 +150,7 @@
   cursor: pointer;
   padding: 3px 7px;
   border-radius: 3px;
+  border: 1px solid white;
 
   &:hover {
     border: 1px solid rgba(175, 47, 47, 0.1);
@@ -203,7 +200,7 @@
   transition: all 0.3s;
 
   &:hover:not(:disabled) {
-    background: darken(#5dc2af, 10%);
+    background: #5dc2af, 10%;
   }
 
   &:disabled {
@@ -228,7 +225,7 @@
     font-size: 16px;
 
     &:hover {
-      background: darken(#5dc2af, 10%);
+      background: #5dc2b0dc;
     }
   }
 }

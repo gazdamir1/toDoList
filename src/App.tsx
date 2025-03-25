@@ -32,7 +32,6 @@ export default function List() {
     setTasks([...tasks, task])
     setNewTask("")
 
-    // Переход на новый слайд, если текущий заполнен
     if (
       tasks.filter((t) => !t.completed).length % 3 === 0 &&
       tasks.length > 0
@@ -61,13 +60,11 @@ export default function List() {
     return true
   })
 
-  // Группируем задачи по 3 для отображения на слайдах
   const taskGroups = []
   for (let i = 0; i < filteredTasks.length; i += 3) {
     taskGroups.push(filteredTasks.slice(i, i + 3))
   }
 
-  // Если нет задач, добавляем одну пустую группу
   if (taskGroups.length === 0) {
     taskGroups.push([])
   }
